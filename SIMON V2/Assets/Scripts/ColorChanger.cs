@@ -5,52 +5,50 @@ using UnityEngine;
 using UnityEngine.UI;
 using Random = UnityEngine.Random;
 
-public class ColorChanger : MonoBehaviour
+
+public class ColoredTile
 {
+    public string color_name;
+    public string color_hex;
 
-    struct ColoredTile
+    public void SetColor(string name, string hex)
     {
-        public string color_name;
-        public string color_hex;
+        color_name = name;
+        color_hex = hex;
+    }
+}
+
+public static class ColorChanger
+{
+    public static List<ColoredTile> CreateColorArray(Theme theme, int rows)
+    { 
+        List<ColoredTile> temps = new List<ColoredTile>();
+
+        ColoredTile temp = new ColoredTile();
+        temp.SetColor(theme.color1_name, theme.color1_color);
+        temps.Add(temp);
+        ColoredTile temp1 = new ColoredTile();
+        temp1.SetColor(theme.color2_name, theme.color2_color);
+        temps.Add(temp1);
+        ColoredTile temp2 = new ColoredTile();
+        temp2.SetColor(theme.color3_name, theme.color3_color);
+        temps.Add(temp2);
+        ColoredTile temp3 = new ColoredTile();
+        temp3.SetColor(theme.color4_name, theme.color4_color);
+        temps.Add(temp3);
+        ColoredTile temp4 = new ColoredTile();
+        temp4.SetColor(theme.color5_name, theme.color5_color);
+        temps.Add(temp4);
+
+        List<ColoredTile> colors = new List<ColoredTile>();
+        //Duplicate the amount of colors #rows times to match the number of tiles
+        for (int i = 0; i < rows; i++) colors.AddRange(temps);
+
+        return colors;
     }
 
-
-    [SerializeField] Theme theme;
-
-    List<ColoredTile> colors = new List<ColoredTile>();
-
-    Color color;
-    Color changedColor;
-    float duration = 2.0f;
-
-    bool flag = true;
-
-    private void CreateColorArray()
+    public static void RandomizeColors(List<ColoredTile> colors)
     {
-
-        //Add all the values from the theme to the list
-        ColoredTile temp;
-        temp.color_name = theme.color1_name;
-        temp.color_hex = theme.color1_color;
-        colors.Add(temp);
-        temp.color_name = theme.color2_name;
-        temp.color_hex = theme.color2_color;
-        colors.Add(temp);
-        temp.color_name = theme.color3_name;
-        temp.color_hex = theme.color3_color;
-        colors.Add(temp);
-        temp.color_name = theme.color4_name;
-        temp.color_hex = theme.color4_color;
-        colors.Add(temp);
-        temp.color_name = theme.color5_name;
-        temp.color_hex = theme.color5_color;
-        colors.Add(temp);
-    }
-
-
-    private void RandomizeColors()
-    {
-
         //Shuffles the list of colors
         for (int i = 0; i < colors.Count; i++)
         {
@@ -67,7 +65,7 @@ public class ColorChanger : MonoBehaviour
     {
         //helper function designed to get the color from the themes
         Color c;
-        String toBeConverted = "#" + hexString;
+        string toBeConverted = "#" + hexString;
         if (ColorUtility.TryParseHtmlString(toBeConverted, out c))
         {
             c.a = 0.75f;
@@ -77,41 +75,5 @@ public class ColorChanger : MonoBehaviour
         {
             return Color.white;
         }
-    }
-
-    private void Start()
-    {
-        CreateColorArray();
-        RandomizeColors();
-        gameObject.GetComponent<Image>().color = HexToColor(colors[0].color_hex);
-    }
-
-    private void Update()
-    {
-        if (flag) ChangeColorViaGradient();
-    }
-
-
-
-
-    private void ChangeColorViaGradient()
-    {
-        flag = false;
-        RandomizeColors();
-        color = gameObject.GetComponent<Image>().color;
-        changedColor = HexToColor(colors[0].color_hex);
-        StartCoroutine(onHolding());
-    }
-
-    private IEnumerator onHolding()
-    {
-        float i = 0.0f;
-        while (i < 1.0f)
-        {
-            i += Time.deltaTime / duration;
-            gameObject.GetComponent<Image>().color = Color.Lerp(color, changedColor, i);
-            yield return null;
-        }
-        flag = true;
     }
 }
