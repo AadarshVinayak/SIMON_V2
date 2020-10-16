@@ -67,6 +67,8 @@ public class Game : MonoBehaviour
         else
         {
             //Bring up the gameover screen
+            score.CheckHighScore(score.GetScore());
+            Debug.Log(score.GetHighScore());
             FindObjectOfType<GameOver>().SetGameOver(true);
             p.ToMove(false);
             WhiteOutGrid();
