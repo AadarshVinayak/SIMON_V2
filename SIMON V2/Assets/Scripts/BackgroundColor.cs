@@ -4,17 +4,19 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class BackgroundColor : MonoBehaviour
-{
-    
+{   
 
     [SerializeField] Theme theme;
 
+    //list of colors
     List<ColoredTile> colors = new List<ColoredTile>();
 
+    //lerp requirements
     Color color;
     Color changedColor;
     float duration = 2.0f;
 
+    //loop the lerp
     bool flag = true;
 
   
@@ -29,7 +31,8 @@ public class BackgroundColor : MonoBehaviour
     {
         if (flag) ChangeColorViaGradient();
     }
-
+    
+    //Change the color via lerp
     private void ChangeColorViaGradient()
     {
         flag = false;

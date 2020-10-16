@@ -7,7 +7,8 @@ public class Score : MonoBehaviour
 {
     TMP_Text score;
     int scoreNum = 0;
-    // Start is called before the first frame update
+    
+
     void Start()
     {
         score = gameObject.GetComponent<TMP_Text>();
@@ -19,6 +20,7 @@ public class Score : MonoBehaviour
         score.text = scoreNum.ToString();
     }
 
+    //This score will recieve an update during the game loop
     public void UpdateScore(int newScore)
     {
         scoreNum = newScore;

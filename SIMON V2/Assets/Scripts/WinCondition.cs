@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class WinCondition : MonoBehaviour
 {
-
+    //Lerp parameters
     float duration = 0.2f;
     Color changedColor;
+
+    //Given the name and color make the win condition
     public void SetWinCondition(string name, Color color)
     {
         changedColor = color;
@@ -31,6 +33,7 @@ public class WinCondition : MonoBehaviour
         }
     }
 
+    //helper functions
     public string GetName()
     {
         return gameObject.name;

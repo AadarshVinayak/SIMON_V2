@@ -23,6 +23,7 @@ public class GameOver : MonoBehaviour
         }
     }
 
+    //disables the game canvas and enables the ending canvas while keeping the games score
     private void StopGame()
     {
         mainGame.SetActive(false);

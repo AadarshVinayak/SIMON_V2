@@ -8,6 +8,7 @@ using Random = UnityEngine.Random;
 
 public class ColoredTile
 {
+    //Just to manage the theme
     public string color_name;
     public string color_hex;
 
@@ -22,8 +23,10 @@ public static class ColorChanger
 {
     public static List<ColoredTile> CreateColorArray(Theme theme, int rows)
     { 
+        //defines a temp list
         List<ColoredTile> temps = new List<ColoredTile>();
 
+        //creates an object of that type and adds it to the list
         ColoredTile temp = new ColoredTile();
         temp.SetColor(theme.color1_name, theme.color1_color);
         temps.Add(temp);

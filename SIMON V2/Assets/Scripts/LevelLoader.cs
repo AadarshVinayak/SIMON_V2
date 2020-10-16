@@ -7,7 +7,6 @@ public class LevelLoader : MonoBehaviour
 {
     public void LoadStart()
     {
-        gameObject.GetComponent<ResetScene>().resetTheGame();
         LoadSceneWithDelay("Main", 0.5f);
     }
 

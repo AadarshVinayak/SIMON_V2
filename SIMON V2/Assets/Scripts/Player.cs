@@ -4,13 +4,26 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+
+    //coordinates
     float x;
     float y;
+
+    //This is the displacement between each tile
     float displacement = 1.125f;
+    //number of rows
     float rows = 5;
+
+    //flag to dtermine movement
     bool movement;
+
+    //The current tile that the player is on
     GameObject current;
+
+    //time to move to a different tile
     float duration = 0.1f;
+
+    //Used for touch input
     Vector2 startTouchPosition, endTouchPosition;
 
     void Start()
@@ -21,7 +34,7 @@ public class Player : MonoBehaviour
     }
 
 
-
+    //Touch screen input system
     private void CheckForInputTouch()
     {
         if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
@@ -60,6 +73,7 @@ public class Player : MonoBehaviour
     }
 
 
+    //computer testing input
     private void CheckForInput()
     {
         if (Input.GetKeyDown(KeyCode.UpArrow))
@@ -103,6 +117,7 @@ public class Player : MonoBehaviour
         if (movement) CheckForInputTouch();
     }
 
+    //move with a lerp
     private void MoveSlow()
     {
         StartCoroutine(Move());
