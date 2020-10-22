@@ -63,7 +63,6 @@ public static class ColorChanger
     }
 
 
-
     public static Color HexToColor(string hexString)
     {
         //helper function designed to get the color from the themes
@@ -71,7 +70,7 @@ public static class ColorChanger
         string toBeConverted = "#" + hexString;
         if (ColorUtility.TryParseHtmlString(toBeConverted, out c))
         {
-            c.a = 0.75f;
+            c.a = 1f;
             return c;
         }
         else

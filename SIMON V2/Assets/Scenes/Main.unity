@@ -356,13 +356,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 3575471596063189863, guid: f7f720cea93da1b4eb09440d057a12be, type: 3}
   m_PrefabInstance: {fileID: 497681707}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 755515889}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5e605acf436fe5e49a3c4bf7f65284b3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  theme: {fileID: 11400000, guid: baa74044adc2e6d4eb1470aa666d44eb, type: 2}
 --- !u!114 &992177353 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7849234146372134171, guid: 131c660305b76e24091d7f659cf1ac01, type: 3}
@@ -542,7 +535,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 10.285, y: -41}
+  m_AnchoredPosition: {x: 0, y: -41}
   m_SizeDelta: {x: 234.12, y: 111.61}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1440389374
@@ -592,8 +585,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 50
-  m_fontSizeBase: 50
+  m_fontSize: 75
+  m_fontSizeBase: 75
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -676,8 +669,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.0000038147, y: 152.1}
-  m_SizeDelta: {x: 254.69, y: 152.76}
+  m_AnchoredPosition: {x: 0.0010376, y: 176.76}
+  m_SizeDelta: {x: 560.58, y: 202.08}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1446200104
 MonoBehaviour:
@@ -726,13 +719,13 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 100
-  m_fontSizeBase: 100
+  m_fontSize: 125
+  m_fontSizeBase: 125
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -813,8 +806,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -280.31}
-  m_SizeDelta: {x: 543.14, y: 689.34}
+  m_AnchoredPosition: {x: 5.7e-14, y: -277}
+  m_SizeDelta: {x: 560.58, y: 748.21}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1569519947
 MonoBehaviour:
@@ -988,7 +981,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1592360541233002078, guid: cd08cc524344d6243be197e5450659ed, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.27
+      value: -0.334
       objectReference: {fileID: 0}
     - target: {fileID: 1592360541233002078, guid: cd08cc524344d6243be197e5450659ed, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1100,7 +1093,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19c1989eeceeacf4b8c772026ea45929, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  theme: {fileID: 11400000, guid: baa74044adc2e6d4eb1470aa666d44eb, type: 2}
 --- !u!114 &2137801145
 MonoBehaviour:
   m_ObjectHideFlags: 0
