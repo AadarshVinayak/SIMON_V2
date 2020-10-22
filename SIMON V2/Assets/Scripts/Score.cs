@@ -29,4 +29,23 @@ public class Score : MonoBehaviour
         return scoreNum;
     }
 
+    public int GetHighScore()
+    {
+        if (PlayerPrefs.HasKey("HighScore"))
+        {
+            return PlayerPrefs.GetInt("HighScore");
+        }
+        else
+        {
+            SetHighScore(0);
+            return 0;
+        }
+    }
+
+    public void SetHighScore(int score)
+    {
+        PlayerPrefs.SetInt("HighScore", score);
+        PlayerPrefs.Save();
+    }
+
 }
