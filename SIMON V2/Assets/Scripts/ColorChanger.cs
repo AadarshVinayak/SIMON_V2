@@ -63,13 +63,6 @@ public class ColorChanger : MonoBehaviour
 
 
 
-    public static Color SetAlpha(Color c, float alpha)
-    {
-        if(alpha >0 && alpha < 1) c.a = alpha;
-        return c;
-    }
-
-
     public static Color HexToColor(string hexString)
     {
         //helper function designed to get the color from the themes
@@ -77,7 +70,7 @@ public class ColorChanger : MonoBehaviour
         String toBeConverted = "#" + hexString;
         if (ColorUtility.TryParseHtmlString(toBeConverted, out c))
         {
-            c.a = 1.00f;
+            c.a = 0.75f;
             return c;
         }
         else

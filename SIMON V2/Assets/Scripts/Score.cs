@@ -29,34 +29,4 @@ public class Score : MonoBehaviour
         return scoreNum;
     }
 
-<<<<<<< Updated upstream
-=======
-    public void CheckHighScore(int newScore)
-    {
-        if (newScore > GetHighScore())
-        {
-            SetHighScore(newScore);
-        }
-    }
-
-    private void SetHighScore(int newScore)
-    {
-        PlayerPrefs.SetInt("HighScore", newScore);
-        PlayerPrefs.Save();
-    }
-
-    public int GetHighScore()
-    {
-        if (PlayerPrefs.HasKey("HighScore"))
-        {
-            return PlayerPrefs.GetInt("HighScore");
-        }
-        else
-        {
-            SetHighScore(0);
-            return 0;
-        }
-    }
-
->>>>>>> Stashed changes
 }
