@@ -62,6 +62,11 @@ public static class ColorChanger
         }
     }
 
+    public static Color SetAlpha(Color c, float alpha)
+    {
+        if (alpha > 0 && alpha < 1) c.a = alpha;
+        return c;
+    }
 
     public static Color HexToColor(string hexString)
     {

@@ -31,6 +31,16 @@ public class Score : MonoBehaviour
         return scoreNum;
     }
 
+    public bool IsScoreGreaterThenHS(int newScore)
+    {
+        return (newScore > GetHighScore());
+    }
+
+    public int PointDifference(int newScore)
+    {
+        return (newScore - GetHighScore());
+    }
+
     public void CheckHighScore(int newScore)
     {
         if (newScore > GetHighScore())
