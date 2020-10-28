@@ -12,6 +12,7 @@ public class Game : MonoBehaviour
     [SerializeField] WinCondition condition;
     [SerializeField] Player p;
     [SerializeField] Score score;
+    [SerializeField] Points points;
 
     [Header("Timeing for transition")]
     [SerializeField] float duration;
@@ -69,6 +70,7 @@ public class Game : MonoBehaviour
             //Bring up the gameover screen
             score.CheckHighScore(score.GetScore());
             Debug.Log(score.GetHighScore());
+            points.PointsCalculator(score.GetScore());
             FindObjectOfType<GameOver>().SetGameOver(true);
             p.ToMove(false);
             WhiteOutGrid();

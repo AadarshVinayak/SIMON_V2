@@ -7,10 +7,13 @@ public class Score : MonoBehaviour
 {
     TMP_Text score;
     int scoreNum = 0;
+    int oldHighScore = 0;
     
 
     void Start()
     {
+        oldHighScore = GetHighScore();
+        //ResetScore();
         score = gameObject.GetComponent<TMP_Text>();
         score.text = "0";
     }
@@ -33,7 +36,7 @@ public class Score : MonoBehaviour
 
     public bool IsScoreGreaterThenHS(int newScore)
     {
-        return (newScore > GetHighScore());
+        return (newScore > oldHighScore);
     }
 
     public int PointDifference(int newScore)
@@ -53,6 +56,11 @@ public class Score : MonoBehaviour
     {
         PlayerPrefs.SetInt("HighScore", newScore);
         PlayerPrefs.Save();
+    }
+
+    private void ResetScore()
+    {
+        PlayerPrefs.SetInt("HighScore", 0);
     }
 
     public int GetHighScore()

@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Points : MonoBehaviour
 {
-
     public int PointsCalculator(int score)
     {
         bool betterThenHS;
