@@ -5,6 +5,7 @@ using TMPro;
 
 public class PointsDisplay : MonoBehaviour
 {
+    int newPoints;
     Points points;
     TMP_Text pointsText; 
     // Start is called before the first frame update
@@ -15,8 +16,13 @@ public class PointsDisplay : MonoBehaviour
         pointsText.text = points.GetPoints().ToString();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void SetScore()
     {
+
+    }
+
+    public void ChangePoints()
+    {
+
     }
 }
