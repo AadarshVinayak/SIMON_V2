@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Points : MonoBehaviour
 {
+    int newPoints;
     public int PointsCalculator(int score)
     {
         bool betterThenHS;
@@ -53,5 +54,15 @@ public class Points : MonoBehaviour
     {
         PlayerPrefs.SetInt("Points", points);
         PlayerPrefs.Save();
+    }
+
+    public void SetNewPoints(int points)
+    {
+        newPoints = points;
+    }
+
+    public int GetPointsToAdd()
+    {
+        return newPoints;
     }
 }

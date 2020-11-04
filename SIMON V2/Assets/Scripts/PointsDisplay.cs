@@ -16,13 +16,8 @@ public class PointsDisplay : MonoBehaviour
         pointsText.text = points.GetPoints().ToString();
     }
 
-    public void SetScore()
+    public void ChangePoints(int points)
     {
-
-    }
-
-    public void ChangePoints()
-    {
-
+        pointsText.text = points.ToString();
     }
 }

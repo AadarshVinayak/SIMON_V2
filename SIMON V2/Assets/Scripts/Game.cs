@@ -69,7 +69,7 @@ public class Game : MonoBehaviour
         {
             //Bring up the gameover screen
             score.CheckHighScore(score.GetScore());
-            points.AddPoints(points.PointsCalculator(score.GetScore()));
+            points.SetNewPoints(points.PointsCalculator(score.GetScore()));
             FindObjectOfType<GameOver>().SetGameOver(true);
             p.ToMove(false);
             WhiteOutGrid();
