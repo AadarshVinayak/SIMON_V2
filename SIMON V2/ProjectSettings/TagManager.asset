@@ -8,6 +8,9 @@ TagManager:
   - Condition
   - Points
   - PointsToAdd
+  - Main
+  - Shop
+  - Settings
   layers:
   - Default
   - TransparentFX
