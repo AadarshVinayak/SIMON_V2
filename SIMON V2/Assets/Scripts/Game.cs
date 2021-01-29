@@ -91,7 +91,7 @@ public class Game : MonoBehaviour
     private void ChangeTime()
     {
         //changes the speed of the animations of the tiles changing colors
-        if (timeBetweenRounds >= 1.5f) timeBetweenRounds -= 0.1f;
+        if (timeBetweenRounds >= 2f) timeBetweenRounds -= 0.05f;
     }
 
     private void UpdateScore()

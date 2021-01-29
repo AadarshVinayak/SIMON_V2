@@ -41,7 +41,7 @@ public class Tile : MonoBehaviour
     private void ChangeDuration()
     {
         float timeDifference = playSpace.GetTimeBetweenRounds();
-        duration = duration * timeDifference;
+        duration *= timeDifference;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
