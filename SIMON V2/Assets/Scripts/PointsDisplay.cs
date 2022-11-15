@@ -13,11 +13,11 @@ public class PointsDisplay : MonoBehaviour
     {
         points = FindObjectOfType<Points>();
         pointsText = gameObject.GetComponent<TMP_Text>();
-        pointsText.text = points.GetPoints().ToString();
+        pointsText.text = "$" + points.GetPoints().ToString();
     }
 
     public void ChangePoints(int points)
     {
-        pointsText.text = points.ToString();
+        pointsText.text = "$" + points.ToString();
     }
 }

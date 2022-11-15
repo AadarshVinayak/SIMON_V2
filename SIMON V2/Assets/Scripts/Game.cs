@@ -38,7 +38,7 @@ public class Game : MonoBehaviour
 
     void Update()
     {
-        //replaces the start fuinction because these dont operate correctly in it
+        //replaces the start function because these dont operate correctly in it
         if (start)
         {
             PopulateGrid();
